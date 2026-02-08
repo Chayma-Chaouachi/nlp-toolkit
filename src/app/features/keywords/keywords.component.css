@@ -1,0 +1,7 @@
+.keyword {
+  display: inline-block;
+  background: var(--bg-card);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+}

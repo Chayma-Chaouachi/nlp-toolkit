@@ -1,0 +1,19 @@
+<h2>Spell Check</h2>
+
+<textarea
+  [(ngModel)]="text"
+  placeholder="Enter your text here..."
+  class="input-text"
+></textarea>
+
+<button (click)="analyze()">Analyze Text</button>
+
+<div class="result" *ngIf="errors.length > 0">
+  <h3>Detected Errors</h3>
+
+  <div class="error" *ngFor="let err of errors">
+    <span class="wrong">{{ err.word }}</span>
+    →
+    <span class="correct">{{ err.suggestion }}</span>
+  </div>
+</div>

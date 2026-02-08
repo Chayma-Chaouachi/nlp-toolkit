@@ -1,0 +1,32 @@
+.input-text {
+  width: 100%;
+  min-height: 160px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.wrong {
+  color: #ef4444;
+}
+
+.correct {
+  color: #22c55e;
+}
