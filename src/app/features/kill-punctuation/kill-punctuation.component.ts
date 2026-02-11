@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-spell-check',
-  templateUrl: './spell-check.component.html',
-  styleUrls: ['./spell-check.component.css']
+  selector: 'app-kill-punctuation',
+  templateUrl: './kill-punctuation.component.html',
+  styleUrls: ['./kill-punctuation.component.css']
 })
-export class SpellCheckComponent implements OnInit {
+export class KillPunctuationComponent implements OnInit {
   text: string = '';
-  errors: any[] = [];
+  cleanedText: string = '';
   particles: Array<{x: number, y: number, delay: number}> = [];
 
   ngOnInit() {
@@ -21,13 +21,9 @@ export class SpellCheckComponent implements OnInit {
     }
   }
 
-analyze() {
-  this.errors = [
-    { word: 'lerning', suggestion: 'learning' },
-    { word: 'languge', suggestion: 'language' }
-  ];
-}
-
+  removePunctuation() {
+    // Supprime toute la ponctuation
+    this.cleanedText = this.text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()'"?¿¡!@]/g, '');
+  }
 
 }
-

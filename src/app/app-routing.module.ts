@@ -6,13 +6,17 @@ import { SpellCheckComponent } from './features/spell-check/spell-check.componen
 import { SummarizationComponent } from './features/summarization/summarization.component';
 import { KeywordsComponent } from './features/keywords/keywords.component';
 import { CleanTextComponent } from './features/clean-text/clean-text.component';
+import { ToLowercaseComponent } from './features/to-lowercase/to-lowercase.component';
+import { KillPunctuationComponent } from './features/kill-punctuation/kill-punctuation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'spell-check', component: SpellCheckComponent },
   { path: 'summarization', component: SummarizationComponent },
   { path: 'keywords', component: KeywordsComponent },
-  { path: 'clean-text', component: CleanTextComponent }
+  { path: 'clean-text', component: CleanTextComponent },
+  { path: 'to-lowercase', component: ToLowercaseComponent },
+  { path: 'kill-punctuation', component: KillPunctuationComponent },
 ];
 
 

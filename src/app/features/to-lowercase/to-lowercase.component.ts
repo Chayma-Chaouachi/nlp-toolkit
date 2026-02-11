@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-spell-check',
-  templateUrl: './spell-check.component.html',
-  styleUrls: ['./spell-check.component.css']
+  selector: 'app-to-lowercase',
+  templateUrl: './to-lowercase.component.html',
+  styleUrls: ['./to-lowercase.component.css']
 })
-export class SpellCheckComponent implements OnInit {
+export class ToLowercaseComponent implements OnInit {
   text: string = '';
-  errors: any[] = [];
+  lowercaseText: string = '';
   particles: Array<{x: number, y: number, delay: number}> = [];
 
   ngOnInit() {
@@ -21,13 +21,8 @@ export class SpellCheckComponent implements OnInit {
     }
   }
 
-analyze() {
-  this.errors = [
-    { word: 'lerning', suggestion: 'learning' },
-    { word: 'languge', suggestion: 'language' }
-  ];
-}
-
+  convertToLowercase() {
+    this.lowercaseText = this.text.toLowerCase();
+  }
 
 }
-

@@ -11,6 +11,8 @@ import { KeywordsComponent } from './features/keywords/keywords.component';
 import { CleanTextComponent } from './features/clean-text/clean-text.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './shared/card/card.component';
+import { ToLowercaseComponent } from './features/to-lowercase/to-lowercase.component';
+import { KillPunctuationComponent } from './features/kill-punctuation/kill-punctuation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CardComponent } from './shared/card/card.component';
     SummarizationComponent,
     KeywordsComponent,
     CleanTextComponent,
-    CardComponent
+    CardComponent,
+    ToLowercaseComponent,
+    KillPunctuationComponent
   ],
   imports: [
     BrowserModule,

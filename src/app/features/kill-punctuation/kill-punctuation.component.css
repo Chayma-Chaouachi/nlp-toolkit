@@ -1,4 +1,4 @@
-.clean-text-container {
+.kill-punctuation-container {
   min-height: 100vh;
   padding: 60px 80px;
   background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f1b36 100%);
@@ -7,7 +7,7 @@
 }
 
 /* Particules d'arrière-plan */
-.clean-text-container::before {
+.kill-punctuation-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -84,7 +84,7 @@
   animation-duration: 10s;
 }
 
-.clean-text-container > *:not(.particles) {
+.kill-punctuation-container > *:not(.particles) {
   position: relative;
   z-index: 1;
 }
@@ -202,12 +202,8 @@
   font-size: 15px;
   line-height: 1.8;
   color: #e2e8f0;
-  padding: 0; /* ✅ Supprimé le padding */
-  background: transparent; /* ✅ Fond transparent */
-  border: none; /* ✅ Pas de bordure */
-  border-radius: 0; /* ✅ Pas de border-radius */
-  min-height: 80px;
-  box-shadow: none; /* ✅ Pas d'ombre */
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .muted {
@@ -215,9 +211,25 @@
   font-style: italic;
 }
 
+/* Animation d'apparition du résultat */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result:not(.muted) {
+  animation: fadeIn 0.4s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .clean-text-container {
+  .kill-punctuation-container {
     padding: 40px 24px;
   }
   
