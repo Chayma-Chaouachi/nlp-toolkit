@@ -1,4 +1,31 @@
-<h1>Welcome to NLP Toolkit</h1>
-<p>
-  Analyze, clean and extract intelligence from text using modern NLP techniques.
-</p>
+<section class="home">
+  <!-- Effet de particules en arrière-plan -->
+  <div class="particles">
+    <div class="particle" *ngFor="let p of particles" [style.left.%]="p.x" [style.top.%]="p.y"></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>
+      Understand Text with
+      <br />
+      <span class="gradient-text">Intelligence</span>
+    </h1>
+    <p class="subtitle">
+      Welcome to the modern NLP Flask-React Bridge. Use the tools on the left to
+      process, clean, and extract meaning from your text data in real-time.
+    </p>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feature-card">
+      <h3>Fast Processing</h3>
+      <p>Powered by NLTK and Sumy for industrial-grade results.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Modern UI</h3>
+      <p>Built with React for a smooth, single-page experience.</p>
+    </div>
+  </div>
+</section>

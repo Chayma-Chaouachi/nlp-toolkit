@@ -21,3 +21,8 @@ body {
   background: radial-gradient(circle at top, #020617, #000);
   color: var(--text-main);
 }
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* 🔒 stop scroll global */
+}

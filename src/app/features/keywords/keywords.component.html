@@ -1,11 +1,39 @@
-<h2>Keyword Extraction</h2>
+<div class="keywords-container">
+  <!-- Particules animées -->
+  <div class="particles">
+    <div class="particle" *ngFor="let p of particles" 
+         [style.left.%]="p.x" 
+         [style.top.%]="p.y"
+         [style.animation-delay]="p.delay + 's'">
+    </div>
+  </div>
 
-<app-card>
-  <textarea class="input"></textarea>
-  <button class="btn-primary">Extract Keywords</button>
-</app-card>
+  <h1 class="title">Keyword Extraction</h1>
 
-<app-card>
-  <span class="keyword">NLP</span>
-  <span class="keyword">Machine Learning</span>
-</app-card>
+  <!-- Input -->
+  <app-card>
+    <textarea
+      class="textarea"
+      placeholder="Paste your text here..."
+      rows="7">
+    </textarea>
+
+    <div class="actions">
+      <button class="btn-primary">
+        Extract Keywords
+      </button>
+    </div>
+  </app-card>
+
+  <!-- Results -->
+  <app-card>
+    <h3 class="subtitle">Extracted Keywords</h3>
+
+    <div class="keywords-list">
+      <span class="keyword">NLP</span>
+      <span class="keyword">Machine Learning</span>
+      <span class="keyword">Artificial Intelligence</span>
+      <span class="keyword">Text Mining</span>
+    </div>
+  </app-card>
+</div>

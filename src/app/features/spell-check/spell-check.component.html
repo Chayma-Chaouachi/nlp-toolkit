@@ -1,19 +1,37 @@
-<h2>Spell Check</h2>
+<div class="spellcheck-container">
+  <h1 class="title">Spell Check</h1>
 
-<textarea
-  [(ngModel)]="text"
-  placeholder="Enter your text here..."
-  class="input-text"
-></textarea>
+  <!-- Input -->
+  <app-card>
+    <textarea
+      [(ngModel)]="text"
+      placeholder="Paste or type your text here..."
+      class="textarea"
+      rows="7">
+    </textarea>
 
-<button (click)="analyze()">Analyze Text</button>
+    <div class="actions">
+      <button class="btn-primary" (click)="analyze()">
+        Analyze Text
+      </button>
+    </div>
+  </app-card>
 
-<div class="result" *ngIf="errors.length > 0">
-  <h3>Detected Errors</h3>
+  <!-- Results -->
+  <app-card *ngIf="errors.length > 0">
+    <h3 class="subtitle">Detected Errors</h3>
 
-  <div class="error" *ngFor="let err of errors">
-    <span class="wrong">{{ err.word }}</span>
-    →
-    <span class="correct">{{ err.suggestion }}</span>
-  </div>
+    <div class="errors-list">
+      <div class="error-item" *ngFor="let err of errors">
+        <span class="wrong">{{ err.word }}</span>
+        <span class="arrow">→</span>
+        <span class="correct">{{ err.suggestion }}</span>
+      </div>
+    </div>
+  </app-card>
+
+  <!-- Empty State -->
+  <app-card *ngIf="errors.length === 0 && text">
+    <p class="muted">No spelling errors detected 🎉</p>
+  </app-card>
 </div>

@@ -1,10 +1,27 @@
-<h2>Clean Text</h2>
+<div class="clean-text-container">
+  <h1 class="title">Clean Text</h1>
 
-<app-card>
-  <textarea class="input"></textarea>
-  <button class="btn-primary">Clean</button>
-</app-card>
+  <!-- Input -->
+  <app-card>
+    <textarea
+      class="textarea"
+      placeholder="Paste your raw text here..."
+      rows="7">
+    </textarea>
 
-<app-card>
-  <p class="muted">Cleaned text will appear here...</p>
-</app-card>
+    <div class="actions">
+      <button class="btn-primary">
+        Clean Text
+      </button>
+    </div>
+  </app-card>
+
+  <!-- Output -->
+  <app-card>
+    <h3 class="subtitle">Cleaned Output</h3>
+
+    <p class="result muted">
+      Cleaned text will appear here...
+    </p>
+  </app-card>
+</div>
