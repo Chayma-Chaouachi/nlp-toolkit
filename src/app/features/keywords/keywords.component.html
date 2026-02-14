@@ -1,8 +1,9 @@
 <div class="keywords-container">
+
   <!-- Particules animées -->
   <div class="particles">
-    <div class="particle" *ngFor="let p of particles" 
-         [style.left.%]="p.x" 
+    <div class="particle" *ngFor="let p of particles"
+         [style.left.%]="p.x"
          [style.top.%]="p.y"
          [style.animation-delay]="p.delay + 's'">
     </div>
@@ -13,13 +14,14 @@
   <!-- Input -->
   <app-card>
     <textarea
+      [(ngModel)]="text"
       class="textarea"
       placeholder="Paste your text here..."
       rows="7">
     </textarea>
 
     <div class="actions">
-      <button class="btn-primary">
+      <button class="btn-primary" (click)="extractKeywords()">
         Extract Keywords
       </button>
     </div>
@@ -30,10 +32,14 @@
     <h3 class="subtitle">Extracted Keywords</h3>
 
     <div class="keywords-list">
-      <span class="keyword">NLP</span>
-      <span class="keyword">Machine Learning</span>
-      <span class="keyword">Artificial Intelligence</span>
-      <span class="keyword">Text Mining</span>
+      <span class="keyword" *ngFor="let k of keywords">
+        {{ k }}
+      </span>
+
+      <p *ngIf="keywords.length === 0" class="muted">
+        Keywords will appear here...
+      </p>
     </div>
   </app-card>
+
 </div>

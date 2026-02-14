@@ -1,8 +1,9 @@
 <div class="summarization-container">
+
   <!-- Particules animées -->
   <div class="particles">
-    <div class="particle" *ngFor="let p of particles" 
-         [style.left.%]="p.x" 
+    <div class="particle" *ngFor="let p of particles"
+         [style.left.%]="p.x"
          [style.top.%]="p.y"
          [style.animation-delay]="p.delay + 's'">
     </div>
@@ -15,11 +16,12 @@
     <textarea
       class="textarea"
       placeholder="Paste your text here..."
-      rows="8">
+      rows="8"
+      [(ngModel)]="inputText">
     </textarea>
 
     <div class="actions">
-      <button class="btn-primary">
+      <button class="btn-primary" (click)="summarizeText()">
         Analyze Text
       </button>
     </div>
@@ -28,8 +30,22 @@
   <!-- Output Card -->
   <app-card>
     <h3 class="subtitle">Summary</h3>
-    <p class="result muted">
-      Your summarized text will appear here...
+
+    <!-- Chargement -->
+    <p class="result muted" *ngIf="loading">
+      Processing...
     </p>
+
+    <!-- Résumé -->
+    <p class="result" *ngIf="summary && !loading">
+      {{ summary }}
+    </p>
+
+    <!-- Erreur -->
+    <p class="result error" *ngIf="error">
+      {{ error }}
+    </p>
+
   </app-card>
+
 </div>

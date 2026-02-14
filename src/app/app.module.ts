@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './shared/card/card.component';
 import { ToLowercaseComponent } from './features/to-lowercase/to-lowercase.component';
 import { KillPunctuationComponent } from './features/kill-punctuation/kill-punctuation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { KillPunctuationComponent } from './features/kill-punctuation/kill-punct
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

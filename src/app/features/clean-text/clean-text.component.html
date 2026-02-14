@@ -8,18 +8,19 @@
     </div>
   </div>
 
-  <h1 class="title">Clean Text</h1>
+  <h1 class="title">Clean HTML</h1>
 
   <!-- Input -->
   <app-card>
     <textarea
+      [(ngModel)]="inputText"
       class="textarea"
       placeholder="Paste your raw text here..."
       rows="7">
     </textarea>
 
     <div class="actions">
-      <button class="btn-primary">
+      <button class="btn-primary" (click)="cleanHtml()">
         Clean Text
       </button>
     </div>
@@ -29,8 +30,8 @@
   <app-card>
     <h3 class="subtitle">Cleaned Output</h3>
 
-    <p class="result muted">
-      Cleaned text will appear here...
+    <p class="result" [class.muted]="!outputText">
+      {{ outputText || 'Cleaned text will appear here...' }}
     </p>
   </app-card>
 </div>
