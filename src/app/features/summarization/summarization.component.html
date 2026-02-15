@@ -15,7 +15,7 @@
   <app-card>
     <textarea
       class="textarea"
-      placeholder="Paste your text here..."
+      placeholder="Paste or type your text here..."
       rows="8"
       [(ngModel)]="inputText">
     </textarea>
@@ -40,6 +40,11 @@
     <p class="result" *ngIf="summary && !loading">
       {{ summary }}
     </p>
+
+    <!-- Message par défaut -->
+  <p class="result muted" *ngIf="!summary && !loading && !error">
+    Summary will appear here...
+  </p>
 
     <!-- Erreur -->
     <p class="result error" *ngIf="error">

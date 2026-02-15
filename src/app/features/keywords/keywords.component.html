@@ -16,7 +16,7 @@
     <textarea
       [(ngModel)]="text"
       class="textarea"
-      placeholder="Paste your text here..."
+      placeholder="Paste or type your text here..."
       rows="7">
     </textarea>
 
@@ -36,7 +36,7 @@
         {{ k }}
       </span>
 
-      <p *ngIf="keywords.length === 0" class="muted">
+      <p *ngIf="keywords.length === 0" class="result muted">
         Keywords will appear here...
       </p>
     </div>

@@ -206,7 +206,7 @@
   background: transparent; /* ✅ Fond transparent */
   border: none; /* ✅ Pas de bordure */
   border-radius: 0; /* ✅ Pas de border-radius */
-  min-height: 80px;
+  
   box-shadow: none; /* ✅ Pas d'ombre */
 }
 

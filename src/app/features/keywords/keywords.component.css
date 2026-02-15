@@ -302,3 +302,16 @@
     display: none;
   }
 }
+
+
+.muted {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.result {
+  font-size: 15px;
+  line-height: 0.3;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}

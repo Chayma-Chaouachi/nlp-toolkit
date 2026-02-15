@@ -258,10 +258,7 @@
 /* État vide */
 .muted {
   color: #94a3b8;
-  font-size: 15px;
   font-style: italic;
-  text-align: center;
-  padding: 20px;
 }
 
 /* Animation d'apparition des erreurs */
@@ -316,7 +313,7 @@
 .result {
   font-size: 15px;
   line-height: 1.8;
-  color: #e2e8f0;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
